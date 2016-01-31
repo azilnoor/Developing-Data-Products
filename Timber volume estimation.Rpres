@@ -1,0 +1,51 @@
+Timber Volume Estimation
+========================================================
+author: Mohd Azil Noor Salleh
+date: `r date()`
+transition: rotate
+
+Executive Summary
+========================================================
+Overview
+
+The program is utilized the Black Cherry Trees datasets (trees) in r. The purpose to to estimate the volume of timber produce by the trees using multivariate linear regression
+
+```{r, echo=FALSE}
+quote(lm(formula, data, subset, weights, na.action,
+   method = "qr", model = TRUE, x = FALSE, y = FALSE, qr = TRUE,
+   singular.ok = TRUE, contrasts = NULL, offset))
+```
+
+Black Cherry Tree Data set
+========================================================
+This data set provides measurements of the girth, height and volume of timber in 31 felled black cherry trees. 
+A data frame with 31 observations on 3 variables.
+
+1. Girth	->numeric	tree diameter in inches
+2. Height	->numeric	height in ft
+3. Volume	->numeric	Volume of timber in cubic ft
+
+First 3 observation
+```{r}
+head(trees,3)
+```
+
+Multivariate Linear Regression
+========================================================
+Building the predictor model:
+```{r}
+treesReg = lm(Volume ~ Girth + Height, data=trees)
+summary(treesReg)
+```
+
+Estimate volume of timber produced 
+========================================================
+Use predict function. Feed the build model, and user input. Example: Girth = 19 inch and height = 80 ft
+```{r}
+newTree <- data.frame(Girth=19,Height=80)
+predict(treesReg, newTree)[[1]]
+```
+This value will be show at the shinyapps after user submit the input.
+
+Shiny apps: https://shinyapps.io
+Git Hub   :
