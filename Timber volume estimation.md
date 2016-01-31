@@ -1,7 +1,7 @@
 Timber Volume Estimation
 ========================================================
 author: Mohd Azil Noor Salleh
-date: Mon Feb 01 02:48:39 2016
+date: Mon Feb 01 03:06:52 2016
 transition: rotate
 
 Executive Summary
@@ -82,7 +82,8 @@ predict(treesReg, newTree)[[1]]
 ```
 [1] 58.60749
 ```
-This value will be show at the shinyapps after user submit the input.
+This value will be show at the shinyapps after user submit the input. Follow below links
 
-Shiny apps: https://shinyapps.io
-Git Hub   :
+Shiny apps: https://azilnoor.shinyapps.io/Developing-Data-Products/
+
+Git Hub   :https://github.com/azilnoor/Developing-Data-Products

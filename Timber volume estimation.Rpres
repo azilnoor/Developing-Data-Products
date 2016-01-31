@@ -45,7 +45,8 @@ Use predict function. Feed the build model, and user input. Example: Girth = 19 
 newTree <- data.frame(Girth=19,Height=80)
 predict(treesReg, newTree)[[1]]
 ```
-This value will be show at the shinyapps after user submit the input.
+This value will be show at the shinyapps after user submit the input. Follow below links
 
-Shiny apps: https://shinyapps.io
-Git Hub   :
+Shiny apps: https://azilnoor.shinyapps.io/Developing-Data-Products/
+
+Git Hub   :https://github.com/azilnoor/Developing-Data-Products
